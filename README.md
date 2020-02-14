@@ -14,7 +14,6 @@ It is a project from [The Odin Project](https://www.theodinproject.com/courses/j
 > Clone the repo to you local machine
     git clone "https://github.com/Mesi21/WheatherApp"
 
-
 ## Author
 
 #### [Mesi21](https://github.com/Mesi21)
