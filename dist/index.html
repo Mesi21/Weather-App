@@ -6,6 +6,45 @@
     <title>Wheather App</title>
 </head>
 <body>
+    <div id='input'>
+        <div id='header'>
+            <h3>Today</h3>
+            <h3 id="date"></h3>
+        </div>
+        <form>
+            <label for="city">Enter location:</label>
+            <input type="text" id="city" placeholder="Enter city name" required><br>
+            <button type="button" id="btn">Search</button>
+        </form>
+        <div id="info">
+            <div id="temp">
+                <div id="toggle">
+                    <div id="cels">C</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <div id="fahr">F</div>
+                </div>
+                <div>
+                    <div id="searched">--</div>
+                    <span id="grades">--</span>
+                    <span id="grades">°</span>
+                    <span id="unit">C</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="icon"><img id="img"></div>
+                <hr>
+                <div class="col" id="descript">--</div>
+            </div>
+            <div class="row">
+                <div class="col" id="tempMin">--</div>
+                <hr>
+                <div class="col" id="tempMax">--</div>
+            </div>
+        </div>
+    </div>
     <div id="content"></div>
     <script src="main.js"></script>
 </body>
