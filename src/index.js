@@ -1,7 +1,9 @@
 import './style/style.css';
 
 const apiKey = '3c0b4d345113267fbfde2bf609755e17';
-let submitBtn = document.getElementById("btn"); 
+let submitBtn = document.getElementById("btn");
+let searched = document.getElementById("searched");
+let img = document.getElementById("img"); 
 let displayGrade = document.getElementById("grades");
 let displayUnit = document.getElementById("unit");
 let description = document.getElementById("descript");
@@ -44,7 +46,7 @@ const initFunc = (result) => {
     let currentTemp = toggleCelsToFahr(swithcBtn, result).temp;
     let minimum = toggleCelsToFahr(swithcBtn, result).min;
     let maximum = toggleCelsToFahr(swithcBtn, result).max;
-    let currentUnit = toggleCelsToFahr(swithcBtn, result).displayUnit;
+    // let currentUnit = toggleCelsToFahr(swithcBtn, result).displayUnit;
     displayGrade.innerHTML = currentTemp;
     img.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}.png`;
     description.innerHTML = result.weather[0].description;
