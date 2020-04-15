@@ -8,6 +8,8 @@ let icons = document.getElementById("img");
 let description = document.getElementById("descript");
 let minTemp = document.getElementById("tempMin");
 let maxTemp = document.getElementById("tempMax");
+let swithcBtn = document.getElementById('chk');
+// let toggleBtn = document.querySelector(".slider") 
 
 const dateGen = () => {
     let currentDate = document.getElementById('date');
@@ -38,20 +40,19 @@ const getInfo = async (nameOfCity) => {
 }
 
 const initFunc = (result) => {
-    console.log(result);
     searched.innerHTML = result.name;
-    let currentTemp = convertToCelsius(result.main.temp);
-    let minimum = convertToCelsius(result.main.temp_min);
-    let maximum = convertToCelsius(result.main.temp_max);
+    let currentTemp = toggleCelsToFahr(swithcBtn, result).temp;
+    let minimum = toggleCelsToFahr(swithcBtn, result).min;
+    let maximum = toggleCelsToFahr(swithcBtn, result).max;
     displayGrade.innerHTML = currentTemp;
     img.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}.png`;
     description.innerHTML = result.weather[0].description;
-    minTemp.innerHTML = minimum.toString() + '°C';
-    maxTemp.innerHTML = maximum.toString() + '°C';
+    minTemp.innerHTML = minimum;
+    maxTemp.innerHTML = maximum;
 }
 
 submitBtn.addEventListener('click', () => {
-    let nameOfCity = document.getElementById("city").value;
+    let nameOfCity = document.getElementById('city').value;
     if(nameOfCity) {
         getInfo(nameOfCity);
     }
@@ -60,4 +61,19 @@ submitBtn.addEventListener('click', () => {
 const convertToCelsius = (degree) => {
     let celsius = Math.floor(degree - 273.15);
     return celsius;
+}
+
+const toggleCelsToFahr = (swBtn, result) => {
+    let temp, min, max; 
+    if(swBtn.checked === true) {
+        temp = Math.round(result.main.temp);
+        min = Math.round(result.main.temp_min).toString() + '°F';
+        max = Math.round(result.main.temp_max).toString() + '°F';
+        displayUnit.innerHTML = 'F';
+    } else {
+        temp = convertToCelsius(result.main.temp);
+        min = convertToCelsius(result.main.temp_min).toString() + '°C';
+        max = convertToCelsius(result.main.temp_max).toString() + '°C';
+    }
+    return { temp, min, max };
 }

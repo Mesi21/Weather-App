@@ -27,7 +27,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: 0px auto;
+  margin: 3rem auto;
   padding: 30px;
   text-align: center;
 }
@@ -58,23 +58,32 @@ form {
 }
 
 div {
-  margin: 0px;
-  padding: 15px; 
+  margin: 10px 0px;
+  padding: 15px 0px; 
   text-align: center;
 }
 
 h3 {
+  padding: 0px 10px;
   font-weight: 300;
   letter-spacing: 0.4rem;
   font-size: smaller;
 }
 
 #header {
+  height: 8rem;
+  width: 100%;
+  padding: 0px 0px;
+  box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color:#599bb3;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: smaller;
+  border-radius: 2px;
+  color: #fff;
 }
 
 .col {
@@ -181,8 +190,12 @@ input:checked + .slider:before {
   font-weight: 900;
 }
 
+#icon {
+  text-align: center;
+}
+
 #img{
-  padding-left: 55px;
+  margin: 0px auto;
   height: 70px;
   width: 70px;
 }
