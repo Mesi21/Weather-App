@@ -13,7 +13,7 @@
             <h3 id="date"></h3>
         </div>
         <form>
-            <label for="city">Enter location:</label><br>
+            <label for="city"><strong>Enter location:</strong></label><br>
             <input type="text" id="city" placeholder="Enter city name" required><br>
             <button type="button" id="btn">Search</button>
         </form>
@@ -30,19 +30,41 @@
                 <div>
                     <div id="searched">--</div>
                     <span id="grades">--</span>
-                    <span id="grades">°</span>
+                    <span id="degree">°</span>
                     <span id="unit">C</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col" id="icon"><img id="img"></div>
+                <div class="col">
+                    <div><h4>Sky</h4></div>
+                    <div id="icon"><img id="img"></div>
+                </div>
                 <hr>
-                <div class="col" id="descript">--</div>
+                <div class="col">
+                    <h4>Description</h4>
+                    <div id="descript">--</div>
+                </div>
+                <hr>
+                <div class="col">
+                    <h4>Pressure (hPa)</h4>
+                    <div class="col" id="pressure">--</div>
+                </div>                
             </div>
             <div class="row">
-                <div class="col" id="tempMin">--</div>
+                <div class="col">
+                    <h4>Coldest Today</h4>
+                    <div class="col" id="tempMin">--</div>
+                </div>
                 <hr>
-                <div class="col" id="tempMax">--</div>
+                <div class="col">
+                    <h4>Hottest Today</h4>
+                    <div class="col" id="tempMax">--</div>
+                </div>
+                <hr>
+                <div class="col">
+                    <h4>Humidity (%)</h4>
+                    <div class="col" id="humidity">--</div>
+                </div> 
             </div>
         </div>
     </div>

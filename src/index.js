@@ -4,12 +4,12 @@ const apiKey = '3c0b4d345113267fbfde2bf609755e17';
 let submitBtn = document.getElementById("btn"); 
 let displayGrade = document.getElementById("grades");
 let displayUnit = document.getElementById("unit");
-let icons = document.getElementById("img");
 let description = document.getElementById("descript");
 let minTemp = document.getElementById("tempMin");
 let maxTemp = document.getElementById("tempMax");
 let swithcBtn = document.getElementById('chk');
-// let toggleBtn = document.querySelector(".slider") 
+let press = document.getElementById("pressure");
+let humid = document.getElementById("humidity");
 
 const dateGen = () => {
     let currentDate = document.getElementById('date');
@@ -44,11 +44,14 @@ const initFunc = (result) => {
     let currentTemp = toggleCelsToFahr(swithcBtn, result).temp;
     let minimum = toggleCelsToFahr(swithcBtn, result).min;
     let maximum = toggleCelsToFahr(swithcBtn, result).max;
+    let currentUnit = toggleCelsToFahr(swithcBtn, result).displayUnit;
     displayGrade.innerHTML = currentTemp;
     img.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}.png`;
     description.innerHTML = result.weather[0].description;
     minTemp.innerHTML = minimum;
     maxTemp.innerHTML = maximum;
+    press.innerHTML = result.main.pressure;
+    humid.innerHTML = result.main.humidity;
 }
 
 submitBtn.addEventListener('click', () => {
@@ -63,17 +66,24 @@ const convertToCelsius = (degree) => {
     return celsius;
 }
 
+const convertToFahr = (degree) => {
+    let celsius = Math.floor(degree * 9/5 - 459.67);
+    return celsius;
+}
+
 const toggleCelsToFahr = (swBtn, result) => {
     let temp, min, max; 
     if(swBtn.checked === true) {
-        temp = Math.round(result.main.temp);
-        min = Math.round(result.main.temp_min).toString() + '°F';
-        max = Math.round(result.main.temp_max).toString() + '°F';
-        displayUnit.innerHTML = 'F';
+        temp = convertToFahr(result.main.temp);
+        min = convertToFahr(result.main.temp_min).toString() + '°F';
+        max = convertToFahr(result.main.temp_max).toString() + '°F';
+        displayUnit.innerText = 'F';
     } else {
         temp = convertToCelsius(result.main.temp);
         min = convertToCelsius(result.main.temp_min).toString() + '°C';
         max = convertToCelsius(result.main.temp_max).toString() + '°C';
+        displayUnit.innerText = 'C';
     }
-    return { temp, min, max };
+    return { temp, min, max, displayUnit };
 }
+
