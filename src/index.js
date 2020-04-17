@@ -1,6 +1,5 @@
 import './style/style.css';
 
-const apiKey = '3c0b4d345113267fbfde2bf609755e17';
 let submitBtn = document.getElementById("btn");
 let searched = document.getElementById("searched");
 let img = document.getElementById("img"); 
@@ -25,7 +24,8 @@ const dateGen = () => {
 dateGen();
 
 const getInfo = async (nameOfCity) => {
-    await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${nameOfCity}&appid=${apiKey}`)
+    // eslint-disable-next-line no-undef
+    await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${nameOfCity}&appid=${process.env.S3_API}`)
         .then((response) => { 
             if(response.ok) {
                 return response.json();
