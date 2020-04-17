@@ -1,6 +1,7 @@
 # A Wheather App Project
 <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-It is a project from [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app) 
+
+It is a project from [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 ## Technologies Used
     - Javascript
