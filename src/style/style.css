@@ -89,7 +89,7 @@ h4 {
   font-weight: 700;
 }
 
-#header {
+#upper {
   height: 8rem;
   width: 100%;
   padding: 0px 0px;
@@ -313,7 +313,7 @@ input:checked + .slider:before {
     font-weight: 500;
   }
   
-  #header {
+  #upper {
     height: 8rem;
     width: 100%;
     padding: 0px ;
@@ -436,7 +436,7 @@ input:checked + .slider:before {
     font-weight: 700;
   }
 
-  #header {
+  #upper {
     height: 8rem;
     width: 100%;
     padding: 0px ;

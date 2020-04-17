@@ -46,7 +46,6 @@ const initFunc = (result) => {
     let currentTemp = toggleCelsToFahr(swithcBtn, result).temp;
     let minimum = toggleCelsToFahr(swithcBtn, result).min;
     let maximum = toggleCelsToFahr(swithcBtn, result).max;
-    // let currentUnit = toggleCelsToFahr(swithcBtn, result).displayUnit;
     displayGrade.innerHTML = currentTemp;
     img.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}.png`;
     description.innerHTML = result.weather[0].description;
