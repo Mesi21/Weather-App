@@ -22,6 +22,11 @@ Clone the repo to you local machine
 ## Author
 
 #### [Mesi21](https://github.com/Mesi21)
+  - [Email:](mailto:mse212002@gmail.com) - mse212002@gmail.com
+  - [Portfolio]()
+  - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
+  - [twitter](https://twitter.com/buksimesi21) 
+  - [Angel List]()
 
 ## 🤝 Contributing
 All contributions, issues and feature requests are welcome!
