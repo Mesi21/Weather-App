@@ -25,7 +25,7 @@ Clone the repo to you local machine
   - [Email:](mailto:mse212002@gmail.com) - mse212002@gmail.com
   - [Portfolio]()
   - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
-  - [twitter](https://twitter.com/buksimesi21) 
+  - [Twitter](https://twitter.com/buksimesi21) 
   - [Angel List]()
 
 ## 🤝 Contributing
