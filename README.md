@@ -33,7 +33,7 @@ Clone the repo to you local machine
   - [Portfolio]()
   - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
   - [Twitter](https://twitter.com/buksimesi21) 
-  - [Angel List]()
+  - [AngelList]()
 
 ## 🤝 Contributing
 All contributions, issues and feature requests are welcome!
