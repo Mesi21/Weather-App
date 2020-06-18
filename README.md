@@ -3,6 +3,13 @@
 
 It is a project from [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
+## Screenshot
+
+| | |
+| ------------- | ------------- |
+| ![screenshot](src/images/weather1.png) | ![screenshot](src/images/weather2.png)  |
+
+
 ## Technologies Used
     - Javascript
     - Webpack
